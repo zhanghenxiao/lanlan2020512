@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA=Compatible" content="ie-edge">
+    <meta http-equiv="X-UA=Compatible" content="ie-">
     <title>朗朗口腔</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 导入css 文件 -->
+    <link rel="stylesheet" href="./css/normalize.css"> 
+    <link rel="stylesheet" href="./css/commoon.css">
+    <!-- icon 生成器 -->
+    <link rel="stylesheet" href="favicon.ico">
+    
 </head>
 <body>
-    tets
+    <!-- 在块元素中定位logo,当子元素使用float时会造成排版的混乱
+    故需要清除浮动，常见的有三种，alt填写信息有助于搜索引擎查找
+    当子级使用flaot时 务必清浮动-->
+    <div class="container">
+        <header class="clearfix">
+            <h1 class="logo">
+                <!-- 跳转到首页 title这里也是有助于搜索引擎查找 target时新窗口打开-->
+                <a href="./index.html" title="lanlan" target="_blank">
+                <img src="./images/logo.png" alt="lanlan">
+                </a>
+            </h1>
+            <div>
+                顶部菜单
+            </div>
+            <div>顶部导航</div>
+        </header>
+    </div>
 </body>
 </html>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import 'sassConfig';
+
+.container{
+    width: $container_width;
+    height: $container_height;
+    //整个块元素居中
+    margin:0 auto;
+    background-color: black;
+}
+.logo{
+    float: left;
+    // 在header中距离顶部和底部的距离
+    margin-top: 35px;
+    margin-bottom: 31px;
+    //image内联样式display: inline转块元素img{}
+    //同理块元素也可转为内联样式div{display: inline}
+    img{
+        display: block;
+    }
+}
+
+//清除浮动
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix{display: inline-block;}
+html.clearfix{height: 1%;}
+.clearfix{display:block;}

@@ -22,6 +22,8 @@ html {
 
 body {
   margin: 0;
+  color: #000;
+  font-family: "Microsoft YaHei";
 }
 
 /**
@@ -73,8 +75,10 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
+ /* 删除herf 下划线 */
 a {
   background-color: transparent;
+  text-decoration:none ;
 }
 
 /**
