@@ -24,6 +24,7 @@ body {
   margin: 0;
   color: #000;
   font-family: "Microsoft YaHei";
+  /* 浏览器默认字体大小为16px */
 }
 
 /**

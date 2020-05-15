@@ -1,15 +1,26 @@
 @charset "UTF-8";
 @import 'sassConfig';
 
+// 整个头部布局
 .container{
     width: $container_width;
     height: $container_height;
     //整个块元素居中
     margin:0 auto;
-    background-color: black;
+    // background-color: black;
 }
-.logo{
+
+//共用属性，减少资源消耗
+.pull_left{
     float: left;
+}
+.pull_right{
+    float: right;
+}
+
+
+//logo布局
+.logo{
     // 在header中距离顶部和底部的距离
     margin-top: 35px;
     margin-bottom: 31px;
@@ -19,6 +30,88 @@
         display: block;
     }
 }
+.one{
+    .test{
+        position: relative;
+        height: 500px;
+        width: 500px;
+        background-color:$font_accessory_color;
+    }
+}
+.one.co{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+
+    background-color: blueviolet;
+}
+
+
+//顶部菜单
+.meau_link{
+    // 行高等于块元素高度时,就会垂直居中,
+    // 具体是那个块元素的高度需要按需求分析，这里是lang这class的高度
+    line-height: 22px;
+    // margin-top: 17px;
+    a,span,div{float: right;}
+    a{
+        color:$font_accessory_color;
+        font-size: 12px;
+    }
+    //span 可能页面元素会出现多个span标签，故用类名的方式来处理
+    span{
+        width: 1px; 
+        height: 12px;
+        background-color:$font_accessory_color;
+        //外边距上，左右，下
+        margin:5px 14px 0px;
+    }
+    div{
+        font-size: 12px; 
+    }
+}
+
+// 语言样式
+.lang{
+    width: 53px;
+    height: 22px;
+    background-color:$font_accessory_color;
+    text-align: center;
+}
+
+//i标签处理 默认为斜体，中文图标制作的三种方式
+//1.通过背景图，
+//2.是通过border+不同浏览器内核操作去掉边距（-webkit-box-sizing: border-box;)+旋转图案,可封装方法至sass中
+//3.通过伪元素&::after
+.i{
+    //i 标签属于内联样式 若需插入图片则需要做处理
+    display: inline-block;
+    // 取消斜体
+    font-style:normal;
+    width: 10px;
+    height: 10px;
+    // background-color: black;
+    background-image:url(../images/left_arrow.png) ;
+    //背景图默认是平铺所有空间
+    background-repeat: no-repeat;
+    //背景图居中
+    background-position: center;
+    
+    
+}
+
+//顶部导航
+.meau_nav{
+    display: none;
+}
+
+
+
+
+
+
 
 //清除浮动
 .clearfix:after{
